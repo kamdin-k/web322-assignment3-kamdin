@@ -7,40 +7,36 @@
  * 
  * Name: Kamdin Kianpour
  * Student ID: 134281229
- * Date: June 13, 2025
+ * Date: June 15, 2025
  */
 const express = require('express');
 const path = require('path');
 const app = express();
 const projectData = require("./modules/projects");
 
-// Set up static folder
+//set up static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Initialize project data
+//initialize projct data
 projectData.initialize()
     .then(() => console.log("Initialization complete"))
     .catch(err => console.error("Failed to initialize:", err));
-
-// Test route
+//test route
 app.get("/test", (req, res) => {
     console.log("Received request for /test");
     res.send("Test route working");
 });
-
-// Home route
+//home route
 app.get("/", (req, res) => {
     console.log("Received request for /");
     res.sendFile(path.join(__dirname, 'views', 'home.html'));
 });
-
-// About route
+//about route
 app.get("/about", (req, res) => {
     console.log("Received request for /about");
     res.sendFile(path.join(__dirname, 'views', 'about.html'));
 });
-
-// Projects route with optional sector query
+//projects route with optional sector query
 app.get("/solutions/projects", (req, res) => {
     console.log("Received request for /solutions/projects");
     const sector = req.query.sector;
@@ -66,8 +62,7 @@ app.get("/solutions/projects", (req, res) => {
             });
     }
 });
-
-// Project by ID route
+//project by ID route
 app.get("/solutions/projects/:id", (req, res) => {
     console.log(`Received request for /solutions/projects/${req.params.id}`);
     projectData.getProjectById(parseInt(req.params.id))
@@ -80,14 +75,11 @@ app.get("/solutions/projects/:id", (req, res) => {
             res.status(404).json({ error: err });
         });
 });
-
-// 404 handler
+//404 handlr
 app.use((req, res) => {
     console.log(`Received request for unknown route: ${req.url}`);
-    res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
-});
-
-// Start server
+    res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));});
+//start servr
 app.listen(8080, () => {
     console.log("Server running on port 8080");
 });
