@@ -1,11 +1,12 @@
 {
-  "name": "web322-assignment3",
+  "name": "web322-assignment4",
   "version": "1.0.0",
-  "description": "WEB322 Assignment 3",
+  "description": "WEB322 Assignment 4",
   "main": "server.js",
   "author": "Kamdin Kianpour",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^3.1.10",
     "express": "^4.21.2"
   },
   "devDependencies": {

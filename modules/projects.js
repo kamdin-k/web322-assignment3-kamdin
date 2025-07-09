@@ -1,4 +1,4 @@
-/* WEB322 - Assignment 02
+/* WEB322 - Assignment 03
  * 
  * I declare that this assignment is my own work in accordance with Seneca's
  * Academic Integrity Policy:
@@ -7,7 +7,8 @@
  * 
  * Name: Kamdin Kianpour
  * Student ID: 134281229
- * Date: jun 1, 2025
+ * Date: June 15, 2025
+ * publish URL: https://web322-assignment3-kamdin-ntu4.vercel.app/
  */
 //getting the project and sector data files
 const projectData = require("../data/projectData");

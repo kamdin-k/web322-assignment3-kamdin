@@ -7,26 +7,7 @@
   <link href="/css/main.css" rel="stylesheet">
 </head>
 <body class="bg-base-100">
-  <nav class="navbar bg-base-200">
-    <div class="flex-1">
-      <a href="/" class="text-xl font-bold">Climate Solutions</a>
-    </div>
-    <div class="flex-none">
-      <ul class="menu menu-horizontal px-1">
-        <li><a href="/about">About</a></li>
-        <li>
-          <details>
-            <summary>Sector</summary>
-            <ul class="p-2 bg-base-100">
-              <li><a href="/solutions/projects?sector=agriculture">Agriculture</a></li>
-              <li><a href="/solutions/projects?sector=industry">Industry</a></li>
-              <li><a href="/solutions/projects?sector=transport">Transport</a></li>
-            </ul>
-          </details>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <%- include('partials/navbar', { page: "/" }) %>
   <div class="container mx-auto mt-8">
     <div class="hero bg-base-200 rounded-lg p-8" style="background-image: url('/img/Explore Climate Solutions.png'); background-size: cover; background-position: center;">
       <div class="hero-content text-center">
@@ -39,30 +20,30 @@
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
       <div class="card bg-base-200 shadow-xl">
-        <figure><img src="/img/project1.png" alt="Smart Irrigation"></figure>
+        <figure><img src="/img/project1.png" alt="Abandoned Farmland Restoration"></figure>
         <div class="card-body">
-          <h2 class="card-title">Smart Irrigation</h2>
-          <p>Advanced irrigation systems reducing water waste in agriculture.</p>
+          <h2 class="card-title">Abandoned Farmland Restoration</h2>
+          <p>Restoration can bring degraded farmland back into productivity and sequester carbon in the process.</p>
           <div class="card-actions justify-end">
             <a href="/solutions/projects/1" class="btn btn-primary">Learn More</a>
           </div>
         </div>
       </div>
       <div class="card bg-base-200 shadow-xl">
-        <figure><img src="/img/project2.png" alt="Green Manufacturing"></figure>
+        <figure><img src="/img/project2.png" alt="Alternative Cement"></figure>
         <div class="card-body">
-          <h2 class="card-title">Green Manufacturing</h2>
-          <p>Sustainable production methods for industrial efficiency.</p>
+          <h2 class="card-title">Alternative Cement</h2>
+          <p>Conventional cement production is a significant source of carbon dioxide. Reformulation can reduce emissions by millions of metric tons each year.</p>
           <div class="card-actions justify-end">
             <a href="/solutions/projects/2" class="btn btn-primary">Learn More</a>
           </div>
         </div>
       </div>
       <div class="card bg-base-200 shadow-xl">
-        <figure><img src="/img/project3.png" alt="Electric Fleet"></figure>
+        <figure><img src="/img/project3.png" alt="Bicycle Infrastructure"></figure>
         <div class="card-body">
-          <h2 class="card-title">Electric Fleet</h2>
-          <p>Transitioning transport to electric vehicles for lower emissions.</p>
+          <h2 class="card-title">Bicycle Infrastructure</h2>
+          <p>Infrastructure is essential for supporting safe and abundant bicycle use, which curbs emissions by reducing the need for fossil-fuel-dependent transportation.</p>
           <div class="card-actions justify-end">
             <a href="/solutions/projects/3" class="btn btn-primary">Learn More</a>
           </div>
