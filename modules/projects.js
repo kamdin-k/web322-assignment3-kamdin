@@ -8,7 +8,7 @@
  * Name: Kamdin Kianpour
  * Student ID: 134281229
  * Date: June 15, 2025
- * publish URL: https://web322-assignment3-kamdin-ntu4.vercel.app/
+ * publish URL: https://web322-assignment4-kamdin-qp13cfbqm-kamdin-ks-projects.vercel.app
  */
 //getting the project and sector data files
 const projectData = require("../data/projectData");
